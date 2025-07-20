@@ -23,7 +23,7 @@ Function Install-FusionPBX() {
 	#Clone FusionPBX GIT from Master or 4.2
 	if ($system_branch -eq "stable") { $branch = "4.2" }
 	else                             { $branch = ""}
-	Start-Process "C:\Program Files\Git\bin\git.exe" "clone $branch https://github.com/fusionpbx/fusionpbx.git C:/inetpub/FusionPBX/" -Wait
+	Start-Process "C:\Program Files\Git\bin\git.exe" "clone $branch https://github.com/greenberrynetworks/fusionpbx.git C:/inetpub/FusionPBX/" -Wait
 
 	#Grant permissions to FusionPBX folder
 	if ($iis_identity -ne "LocalSystem") {
